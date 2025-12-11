@@ -55,6 +55,7 @@ dependencies {
     implementation("com.google.firebase:firebase-storage") // Lưu file Video
     implementation("com.github.bumptech.glide:glide:4.16.0") // Load ảnh/video thumb
     implementation("androidx.viewpager2:viewpager2:1.0.0") // Vuốt video như TikTok
+    implementation("de.hdodenhof:circleimageview:3.1.0") // Bo tròn ảnh avatar
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }

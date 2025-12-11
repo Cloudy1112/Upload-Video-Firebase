@@ -55,4 +55,8 @@ public class VideoModel {
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
+
+    public int getLikeCount() {
+        return 5; //Sua lai ham like
+    }
 }
