@@ -3,6 +3,7 @@ package com.example.apifirebase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText edtEmail, edtPass;
-    private Button btnLogin;
+    private Button btnLogin, btnSupportchat;
     private TextView tvGoToSignup;
     private FirebaseAuth mAuth;
 
@@ -32,10 +33,25 @@ public class LoginActivity extends AppCompatActivity {
         //Anh Xa
         AnhXa();
 
-        btnLogin.setOnClickListener(v -> loginUser());
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginUser();
+            }
+        });
 
-        tvGoToSignup.setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+        tvGoToSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+            }
+        });
+
+        btnSupportchat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ChatActivity.class));
+            }
         });
     }
 
@@ -72,5 +88,6 @@ public class LoginActivity extends AppCompatActivity {
         edtPass = findViewById(R.id.edtPassLogin);
         btnLogin = findViewById(R.id.btnLogin);
         tvGoToSignup = findViewById(R.id.tvGoToSignup);
+        btnSupportchat = findViewById(R.id.login_btnSupport);
     }
 }

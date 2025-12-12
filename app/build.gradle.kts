@@ -56,6 +56,9 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0") // Load ảnh/video thumb
     implementation("androidx.viewpager2:viewpager2:1.0.0") // Vuốt video như TikTok
     implementation("de.hdodenhof:circleimageview:3.1.0") // Bo tròn ảnh avatar
+    implementation ("io.socket:socket.io-client:2.0.0") {
+        exclude (group ="org.json", module= "json")
+    }
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
