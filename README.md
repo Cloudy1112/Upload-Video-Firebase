@@ -42,7 +42,7 @@ Do chạy local, mỗi khi đổi Wifi, IP của máy tính sẽ thay đổi. C�
 3.  Cập nhật biến `URL_SERVER`:
     ```java
     // Lưu ý: Viết liền, KHÔNG có dấu cách sau http://
-    public static final String URL_SERVER = "[http://192.168.1.15:3000](http://192.168.1.15:3000)";
+    public static final String URL_SERVER = "http://192.168.1.15:3000";
     ```
 4.  Nhấn nút **Run ▶** để cài app vào điện thoại.
 
